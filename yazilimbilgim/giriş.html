@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <style>
+    .form-alanı {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .form-alanı form {
+      position: relative;
+      width: 400px;
+      padding: 20px 40px;
+      height: auto;
+      display: inline-block;
+      text-align: left;
+    }
+    .form-alanı ul {
+      list-style: none;
+      border: 1px solid #00b6e7;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 8px 8px 2px 2px #dddddd;
+    }
+    .form-alanı ul li {
+      width: 100%;
+      color: #2a2a2a;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .form-alanı ul li p {
+      position: relative;
+      padding: 7px 0;
+      margin: 0;
+    }
+    .form-alanı ul li i {
+      color: #00b6e7;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .form-alanı ul li input {
+      display: inline-block;
+      border: 2px solid #dddddd;
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 15px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .form-alanı ul li input:focus,
+    .form-alanı ul li input:valid {
+      border: 2px solid #00b6e7;
+    }
+    .form-alanı form ul .button-list {
+      text-align: center;
+      position: relative;
+      margin-top: 25px;
+    }
+    .form-alanı button {
+      background: white;
+      border: 1px solid #eeeeee;
+      border-radius: 20px;
+      padding: 10px;
+      outline: none;
+      cursor: pointer;
+      font-size: 20px;
+      animation: pulse 2s infinite;
+    }
+    @media screen and (max-width: 420px) {
+      .form-alanı form {
+        width: 320px;
+        padding: 20px;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 #00b6e7;
+      }
+      75% {
+        transform: scale(1);
+        box-shadow: 0 0 0 3px #e1e1e1;
+      }
+      100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 #434343;
+      }
+    }
+  </style>
+  <body>
+    <div class="form-alanı">
+      <form action="?do=uye" method="post">
+        <ul>
+          <li>
+            <p><i class="fas fa-user"></i> Kullanıcı Adı</p>
+          </li>
+          <li>
+            <input type="text" name="name" placeholder=" name..." required />
+          </li>
+          <br /><br />
+          <li>
+            <p><i class="fas fa-lock"></i> şifre</p>
+          </li>
+          <li>
+            <input
+              type="password"
+              name="password"
+              placeholder="password..."
+              required
+            />
+          </li>
+          <br /><br />
+          <li class="button-list"><button type="submit">GİRİŞ YAP</button></li>
+        </ul>
+      </form>
+    </div>
+  </body>
+</html>
